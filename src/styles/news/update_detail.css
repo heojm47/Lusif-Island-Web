@@ -1,0 +1,136 @@
+@import url('../board.css');
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* 전체 컨테이너 */
+.update-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Noto Sans KR', sans-serif;
+    position: relative;
+    top: -170px; /* 이미지와 겹치지 않도록 조정 */
+}
+
+/* 업데이트 헤더 */
+.update-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.update-type {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #28a745; /* 업데이트는 초록색으로 구분 */
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.update-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+/* 메타 정보 */
+.update-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.update-meta span {
+    display: inline-block;
+}
+
+.separator {
+    margin: 0 8px;
+    color: #ddd;
+}
+
+/* 본문 내용 */
+.update-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.update-content p {
+    margin-bottom: 10px;
+}
+
+/* 첨부파일 */
+.attachment {
+    font-size: 14px;
+    color: #555;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.attachment a {
+    color: #28a745; /* 첨부파일 링크는 초록색으로 */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.attachment a:hover {
+    text-decoration: underline;
+}
+
+/* 목록으로 돌아가기 버튼 */
+.back-button-container {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #555;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .update-container {
+        padding: 20px;
+    }
+
+    .update-title {
+        font-size: 20px;
+    }
+
+    .update-content {
+        font-size: 14px;
+    }
+
+    .back-button {
+        font-size: 12px;
+    }
+}

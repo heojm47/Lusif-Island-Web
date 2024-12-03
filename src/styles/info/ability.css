@@ -1,0 +1,559 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Noto Sans KR', Arial, sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.055), rgba(0, 0, 0, 0.575)), url('../../assets/attack1edit.png');/* 배경 이미지 추가 */
+    background-size: cover; /* 배경 이미지가 전체 화면을 덮도록 설정 */
+    background-position: center; /* 배경 이미지의 위치를 중앙으로 설정 */
+    background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    padding-top: 150px;
+    height: 100vh; /* 뷰포트의 전체 높이를 사용 */
+    overflow: hidden; /* 스크롤바 숨기기 */
+    overflow-x: auto;
+    min-width: 1920px; /* 페이지의 최소 가로 길이를 1920px로 설정 */
+  }
+  
+
+.button-group {
+    display: flex;
+    justify-content: space-between; /* 양쪽 끝으로 정렬 */
+    align-items: center; /* 버튼을 수직으로 가운데 정렬 */
+    width: 100%; /* 전체 너비 사용 */
+}
+
+
+.action-buttons-container {
+    display: flex; /* 액션 버튼들을 수평으로 정렬 */
+    gap: 10px; /* 버튼 간 간격 */
+}
+
+.action-button {
+    color: #fff; /* 흰색 텍스트 */
+    border: none;
+    border-radius: 50px; /* 모서리 둥글게 */
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #2a2a2a; /* 클래스 소개 섹션과 동일한 배경색 */  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 12px 28px;
+    min-height: 40px;
+    max-height: 40px;
+    margin-top: 18px;
+    margin-bottom: 18px; /* 아래 여백 추가 */
+    width: 120px;
+}
+
+.action-button.active {
+    background-color: #fff; /* 하얀색 배경 */
+    color: #000; /* 검은색 텍스트 */
+}
+
+/* 클래스 소개 섹션 */
+.content-wrapper {
+    max-width: 500px;
+    margin-left: 350px; /* 왼쪽에서 400px 떨어지게 설정 */
+    width: 100%;
+    padding-top: 50px;
+}
+
+.class-intro {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    background-color: #00000079;
+    border-radius: 0px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.class-image img {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.class-description {
+    max-width: 500px;
+}
+
+.class-description h1 {
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+.class-description p {
+    margin-top: -10px;
+    font-size: 1.1em;
+    margin-bottom: 50px;
+}
+
+/* 스킬 섹션 스타일 */
+.skills-container {
+    display: flex;
+    gap: 20px;
+}
+
+.skill-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* 커서를 포인터로 변경 */
+    z-index: 12;
+}
+
+.skill-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skill-box.active {
+    outline: 2px solid rgba(255, 255, 255, 0.651);
+    transform: translateY(-5px); /* 약간 위로 올라간 효과 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skill-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.skill-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.skill-name {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: -10px;
+}
+
+/* 각 스킬별 특별한 효과 */
+.skill-box:nth-child(1) .skill-icon {
+    background: rgba(255, 100, 0, 0.15);
+}
+
+.skill-box:nth-child(2) .skill-icon {
+    background: rgba(0, 150, 255, 0.15);
+}
+
+.skill-box:nth-child(3) .skill-icon {
+    background: rgba(255, 255, 0, 0.15);
+}
+
+/* 비디오 섹션 */
+.video-section {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.video-container {
+    flex: 1;
+    text-align: center;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 270px;
+    border-radius: 10px;
+}
+
+.video-label {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #c0c0c0;
+}
+
+/* 페이지 이동 화살표 */
+.navigation-arrows {
+    position: fixed; /* relative에서 fixed로 변경 */
+    top: 0;
+    width: 100%;
+    height: 100vh; /* 전체 높이 설정 */
+    z-index: 9;
+    pointer-events: none;
+}
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0);
+    border: none;
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    pointer-events: auto; /* 버튼 자체는 클릭 가능 */
+}
+
+.nav-arrow span {
+    color: white;
+    font-size: 48px;
+}
+
+.left-arrow {
+    left: 260px; /* 위치 조정 */
+}
+
+.right-arrow {
+    right: 260px; /* 위치 조정 */
+}
+
+/* 호버 효과 */
+.nav-arrow:hover {
+    background: rgba(255, 255, 255, 0);
+    transform: translateY(-50%) scale(1.2);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1600px) {
+    .navigation-arrows {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .nav-arrow span {
+        font-size: 40px;
+    }
+    
+    .left-arrow {
+        left: 10px;
+    }
+    
+    .right-arrow {
+        right: 10px;
+    }
+}
+
+.popup {
+    display: none; /* 기본적으로 숨김 */
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent; /* 투명한 검은 배경 */
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* 스크롤 가능 */
+    opacity: 0; /* 초기 투명도 설정 */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* 애니메이션 효과 */
+}
+
+/* 나타날 때 적용될 클래스 */
+.popup.show {
+    display: flex; /* 우선순위 높이기 */
+    opacity: 1; /* 완전 불투명 */
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.popup.hide {
+    animation: fadeOut 0.3s ease forwards; /* 사라질 때 애니메이션 적용 */
+    opacity: 0; /* 투명하게 설정 */
+}
+
+.popup.show .popup-content {
+    opacity: 1;
+    transform: scale(1);
+    animation: fadeIn 0.3s forwards; /* 팝업이 나타날 때의 애니메이션 */
+}
+
+.popup.hide .popup-content {
+    opacity: 0;
+    transform: scale(1.2);
+    animation: fadeOut 0.3s forwards; /* 팝업이 사라질 때의 애니메이션 */
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 920px;
+    text-align: left;
+    color: #fff;
+    flex-direction: column;
+    max-height: 77vh; /* 화면의 전체 높이로 설정 */
+    border-radius: 26px;
+    outline: 2px solid rgba(100, 100, 100, 0.678);
+    margin: 0; /* 마진을 0으로 설정해 상하 여백 제거 */
+    z-index: 11;   
+    backdrop-filter: blur(10px); /* 블러 효과 */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    /* 오른쪽으로 이동 */
+    position: absolute;
+    top: 155px;
+    right: 90px;
+}
+
+.popup-padding {
+    flex: 1;
+    overflow-y: auto; /* 스크롤바를 나타나게 함 */
+    padding: 0px 28px 30px;
+    z-index: 11;
+}
+
+/* 팝업 제목과 닫기 버튼 고정 */
+.popup-header {
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-bottom: 20px;
+    position: sticky; /* 스크롤 시 고정 */
+    top: 0; /* 상단에 고정 */
+    background: transparent; /* 배경색 추가 */
+    z-index: 12; /* 다른 요소 위에 표시 */
+}
+
+/* 나타날 때 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 팝업 사라질 때 애니메이션 */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+/* 웹킷 기반 브라우저에서 스크롤 바 스타일 */
+.popup-padding::-webkit-scrollbar { 
+    width: 8px; /* 스크롤 바의 너비 */
+}
+
+.popup-padding::-webkit-scrollbar-button:vertical:start:decrement,
+.popup-padding::-webkit-scrollbar-button:vertical:start:increment { 
+    display: block;
+    height: 0px;
+}
+
+.popup-padding::-webkit-scrollbar-button:vertical:end:decrement {
+    display: block;
+    height: 25px;
+}
+
+.popup-padding::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0); /* 스크롤 바 트랙의 배경색 */
+    border-radius: 10px; /* 모서리 둥글게 */
+}
+
+.popup-padding::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.301); /* 스크롤 바의 색상 */
+    border-radius: 10px; /* 모서리 둥글게 */
+}
+
+.popup-padding::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.589); /* 호버 시 색상 변경 */
+}
+
+/* 스킬 제목 스타일 */
+#skill-title {
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-top: 0;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: left;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 10;  
+}
+
+/* 스킬 비디오 컨테이너 스타일 */
+.skill-video {
+    display: flex; /* Flexbox를 사용하여 비디오와 설명을 나란히 배치 */
+    align-items: center; /* 수직 중앙 정렬 */
+    margin-bottom: 0px; /* 아래 여백 추가 */
+}
+
+.skill-video video {
+    width: 100%; /* 비디오의 너비를 100%로 설정 */
+    height: auto; /* 비디오의 높이를 자동으로 설정 */
+    max-height: 200px; /* 최대 높이 설정 (예: 200px) */
+    object-fit: cover; /* 비디오의 비율을 유지하면서 자르기 */
+    margin-right: 20px; /* 비디오와 설명 사이의 간격 */
+}
+
+/* 스킬별 테마 스타일 */
+.fire-theme {
+    background: linear-gradient(180deg, rgb(40, 0, 0), #000000e3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.ice-theme {
+    background: linear-gradient(180deg, rgb(0, 20, 40), #000000e3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.lightning-theme {
+    background: linear-gradient(180deg, rgb(40, 40, 0), #000000e3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.skill-video video {
+    width: 40%;
+    border-radius: 12px;
+    z-index: 10;  
+}
+
+/* 스킬 설명 스타일 */
+.skill-details {
+    height: 200px;
+    max-height: 200px;
+    flex: 1; /* 설명 부분이 남은 공간을 차지하도록 설정 */
+    border-radius: 12px; /* 모서리 둥글게 유지 */
+    z-index: 10;  
+}
+
+.skill-details h3 {
+    font-size: 1.7em;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.fire-theme .skill-details h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255, 38, 0, 0.7), transparent);
+}
+
+.ice-theme .skill-details h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(0, 150, 255, 0.7), transparent);
+}
+
+.lightning-theme .skill-details h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255, 255, 0, 0.7), transparent);
+}
+
+.skill-details p {
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* 닫기 버튼 스타일 */
+.close-button {
+    font-size: 34px;
+    color: #ffffffdc;
+    position: absolute;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 11;
+}
+
+.close-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#skill-videos {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.skill-video {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 0px;
+}
+
+.skill-video video {
+    width: 40%;
+    border-radius: 8px;
+}
+
+/* 스킬 설명 틀 */
+.skill-details {  
+    flex: 1;  
+    color: #fff;
+    font-size: 1rem;
+    background: transparent;
+    padding-left: 10px;
+    border-radius: 8px;
+}
+
+.skill-divider {
+    border: none;  /* 기본 테두리 제거 */
+    height: 2px;   /* 높이 설정 */
+    background-color: rgba(255, 255, 255, 0.3);  /* 흰색 구분선 */
+    margin: 20px 0;  /* 위아래 여백 설정 */
+    z-index: 10;  
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lusif's Island - 내 문의 내역</title>
+    <link rel="stylesheet" href="../../styles/support/Inquiry details.css">
+    <script src="../../scripts/support/Inquiry details.js" defer></script>
+    <script src="../../scripts/log-in/log-out.js" defer></script>
+    <script src="../../scripts/my-page.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="../../../public/index.html" class="logo-link">
+                <img src="../../assets/SupLogo.png" alt="Logo" class="logo-image">
+            </a>
+            <div class="auth-buttons">
+                <a href="#" id="admin-dashboard-button" class="admin-button" style="display: none;">관리자 대시보드</a>
+                <button id="mypage-button" class="mypage-button" style="display:none;">
+                    <img src="../../assets/mypage.png" alt="My Page" class="mypage-icon">
+                </button>
+                <span class="divider" style="display:none;">〡</span>
+                <span id="welcome-message" class="welcome-message" style="display:none;">OOO님 환영합니다!</span>
+                <a href="#" id="logout" class="auth-button" style="display:none;">로그아웃</a>
+                <a href="../log-in/log-in.html" id="login-button" class="auth-button">로그인</a>
+                <a href="../log-in/signup.html" class="auth-button signup-button">회원가입</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="banner-content">
+            <a href="support.html" class="title-link">
+                <h1>LUSIF'S ISLAND 고객센터</h1>
+            </a>
+            <div class="search-inquiry-container">
+                <div class="search-container">
+                    <input type="text" class="element-input" id="searchKey" placeholder="검색어를 입력하세요.">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <a href="Inquiry details.html" class="inquiry-lists">내 문의내역</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <section class="inquiry-section">
+            <div class="inquiry-header">
+                <h2>내 문의내역</h2>
+                <p class="inquiry-subtext">최근 1년간의 문의 내역을 조회할 수 있습니다.</p>
+            </div>
+            <div class="inquiry-content">
+                <div class="inquiry-list"></div>
+                <div class="inquiry-empty">
+                    <i class="fas fa-ghost ghost-icon"></i>
+                    <p>문의하신 내용이 없습니다.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 팝업 -->
+    <div id="inquiry-detail-popup" class="popup hidden" style="display: none;">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h4 id="popup-title"></h4>
+            <p><strong>유형:</strong> <span id="popup-inquiry-type"></span></p>
+            <p><strong>작성일:</strong> <span id="popup-created-at"></span></p>
+            <p><strong>상태:</strong> <span id="popup-status"></span></p>
+            <p><strong>문의 내용:</strong> <span id="popup-content"></span></p>
+            <h4>관리자 답변</h4>
+            <p id="popup-reply-content"></p>
+            <p><strong>답변 작성일:</strong> <span id="popup-reply-created-at"></span></p>
+        </div>
+    </div>
+</body>
+</html>

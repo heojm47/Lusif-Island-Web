@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lusif is Island - 공략게시판</title>
+    <link rel="stylesheet" href="../../styles/community/communityStyles.css">
+    <link rel="stylesheet" href="../../styles/community/view_post.css">
+    <link rel="stylesheet" href="../../styles/community/strategy_view.css">
+    <script src="../../scripts/script.js"></script>
+    <script src="../../scripts/radiobutton.js"></script>
+    <script src="../../scripts/log-in/log-out.js"></script>
+    <script src="../../scripts/my-page.js"></script>
+    <script src="../../scripts/admin.js"></script>
+    <script src="../../scripts/community/strategy/view_post.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="top-bar">
+        <a href="#" class="logo"></a>
+        <div class="auth-links">
+            <a href="#" id="admin-dashboard-button" class="admin-button" style="display: none;">관리자 대시보드</a>
+            <button id="mypage-button" class="mypage-button" style="display:none;">
+                <img src="/src/assets/mypage.png" alt="My Page" class="mypage-icon">
+            </button>
+            <span class="divider" style="display:none;">〡</span>
+            <span id="welcome-message" class="welcome-message" style="display:none;"></span> <!-- 환영 메시지 추가 -->
+            <a href="../log-in/log-in.html" id="login-button" class="login-button">로그인</a>
+            <span></span>
+            <a href="../log-in/signup.html" class="signup-button">회원가입</a>
+            <a href="#" id="logout" class="login-button" style="display:none;">로그아웃</a>
+        </div>
+    </div>
+    
+    <header>
+        <div class="header-content">
+            <a href="../../../public/index.html">
+                <img src="../../assets/logo.png" alt="Lusif is Island" class="logo">
+            </a>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="../news/notice.html">새소식</a></li>
+                    <li><a href="../info/ability.html">게임정보</a></li>
+                    <li><a href="../community/general.html">커뮤니티</a></li>
+                    <li><a href="../support/support.html">고객센터</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="dropdown-container">
+        <div class="dropdown-content">
+            <ul>
+                <li><a href="../news/notice.html">공지사항</a></li>
+                <li><a href="../news/update.html">업데이트</a></li>
+            </ul>
+            <ul>
+                <li><a href="../info/ability.html">능력</a></li>
+                <li><a href="../info/worldview.html">세계관</a></li>
+            </ul>
+            <ul>
+                <li><a href="general.html">자유</a></li>
+                <li><a href="strategy.html">공략</a></li>
+            </ul>
+            <ul>
+                <li><a href="../download.html">클라이언트</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="image-banner">
+        <img src="../../assets/newbannertest.jpg" alt="Notice Banner">
+    </div>
+
+    <main class="content">
+        <div class="board-container">
+            <div class="board-header view_post">
+                <h1><a href="strategy.html" id="board-title">공략게시판</a></h1>
+            </div>
+            
+            <div class="view-post-content">
+                <div class="post-header">
+                    <div class="category-tag" id="post-category"></div>
+                    <h1 id="post-title"></h1>
+                    <div class="post-info">
+                        <span id="post-author"></span>
+                        <span class="separator">|</span>
+                        <span id="post-date"></span>
+                        <span class="separator">|</span>
+                        <span id="post-views">조회 0</span>
+                        <span class="separator">|</span>
+                        <span id="post-likes">추천 0</span>
+                    </div>
+                </div>
+                
+                <div class="post-content" id="post-content">
+                </div>
+                <div class="post-images" id="post-images"></div>
+
+                <div class="post-actions">
+                    <button id="like-button" class="action-button">
+                        <i class="fas fa-heart"></i> 추천
+                    </button>
+                    <div class="right-actions">
+                        <button id="edit-button" class="action-button">수정</button>
+                        <button id="delete-button" class="action-button">삭제</button>
+                    </div>
+                </div>
+
+                <div class="comments-section">
+                    <h3>댓글</h3>
+                    <div class="comment-form">
+                        <textarea id="comment-input" placeholder="댓글을 입력하세요."></textarea>
+                        <button id="submit-comment">등록</button>
+                    </div>
+                    <div id="comments-list">
+                    </div>
+                </div>
+
+                <div class="post-navigation">
+                    <a href="strategy.html" class="list-button">목록</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

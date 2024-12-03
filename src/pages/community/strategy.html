@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lusif is Island - 공략게시판</title>
+    <link rel="stylesheet" href="../../styles/community/communityStyles.css">
+    <link rel="stylesheet" href="../../styles/community/category.css">
+    <script src="../../scripts/script.js"></script>
+    <script src="../../scripts/radiobutton.js"></script>
+    <script src="../../scripts/log-in/log-out.js"></script>
+    <script src="../../scripts/community/strategy/strategy.js" defer></script>
+    <script src="../../scripts/my-page.js"></script>
+    <script src="../../scripts/admin.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="top-bar">
+        <a href="#" class="logo"></a>
+        <div class="auth-links">
+            <a href="#" id="admin-dashboard-button" class="admin-button" style="display: none;">관리자 대시보드</a>
+            <button id="mypage-button" class="mypage-button" style="display:none;">
+                <img src="/src/assets/mypage.png" alt="My Page" class="mypage-icon">
+            </button>
+            <span class="divider" style="display:none;">〡</span>
+            <span id="welcome-message" class="welcome-message" style="display:none;"></span> <!-- 환영 메시지 추가 -->
+            <a href="../log-in/log-in.html" id="login-button" class="login-button">로그인</a>
+            <span></span>
+            <a href="../log-in/signup.html" class="signup-button">회원가입</a>
+            <a href="#" id="logout" class="login-button" style="display:none;">로그아웃</a>
+        </div>
+    </div>
+    
+    <header>
+        <div class="header-content">
+            <a href="../../../public/index.html">
+                <img src="../../assets/logo.png" alt="Lusif is Island" class="logo">
+            </a>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="../news/notice.html">새소식</a></li>
+                    <li><a href="../info/ability.html">게임정보</a></li>
+                    <li><a href="../community/general.html">커뮤니티</a></li>
+                    <li><a href="../support/support.html">고객센터</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="dropdown-container">
+        <div class="dropdown-content">
+            <ul>
+                <li><a href="../news/notice.html">공지사항</a></li>
+                <li><a href="../news/update.html">업데이트</a></li>
+            </ul>
+            <ul>
+                <li><a href="../info/ability.html">능력</a></li>
+                <li><a href="../info/worldview.html">세계관</a></li>
+            </ul>
+            <ul>
+                <li><a href="general.html">자유</a></li>
+                <li><a href="strategy.html">공략</a></li>
+            </ul>
+            <ul>
+                <li><a href="../download.html">클라이언트</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="image-banner">
+        <img src="../../assets/newbannertest.jpg" alt="Notice Banner">
+    </div>
+
+    <main class="content">
+        <div class="board-container">
+            <div class="board-header">
+                <h1><a href="javascript:void(0);" id="board-title">공략게시판</a></h1>
+                <div class="search-bar">
+                    <select class="search-filter" id="searchFilter">
+                        <option value="title">제목</option>
+                        <option value="content">내용</option>
+                        <option value="author">작성자</option>
+                    </select>
+                    <input type="text" placeholder="검색어를 입력해 주세요.">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+            <div class="sort-options">
+                <div class="category">
+                    <select id="category-select" name="category">
+                        <option value="full">카테고리</option>
+                        <option value="boss">보스</option>
+                        <option value="battle">전투</option>
+                        <option value="ability">능력</option>
+                    </select>
+                </div>
+    
+                <label>
+                    <input type="radio" name="sort" value="latest" checked>
+                    <span class="icon"><i class="fas fa-check"></i></span> 최신순
+                </label>
+                <label>
+                    <input type="radio" name="sort" value="likes">
+                    <span class="icon"><i class="fa-solid fa-circle"></i></span> 추천순
+                </label>
+            </div>
+    
+            <div class="post-list" id="post-list">
+                <!-- 게시글 목록이 여기에 동적으로 추가됩니다. -->
+            </div>
+    
+            <div class="write-post">
+                <div class="button-container"> 
+                    <a href="strategy_write.html"><button id="write-button" class="styled-button">글쓰기</button></a>
+                </div>
+            </div>
+    
+            <div class="pagination-container">
+                <div class="pagination" id="pagination">
+                    <button class="page-btn prev-btn" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="page-numbers">
+                        <!-- 페이지 번호들이 여기에 동적으로 추가됩니다 -->
+                    </div>
+                    <button class="page-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        
+        
+
+    </main>
+</body>
+</html>

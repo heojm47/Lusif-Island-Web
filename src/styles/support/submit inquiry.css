@@ -1,0 +1,110 @@
+@import url(image.css);
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.inquiry-form-section {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.inquiry-form-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.inquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.inquiry-form label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.inquiry-form input[type="email"],
+.inquiry-form select,
+.inquiry-form input[type="text"],
+.inquiry-form textarea {
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d4d6d9;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.inquiry-form textarea {
+    font-family: 'Noto Sans KR', sans-serif;
+    resize: vertical;
+    height: 100px;
+}
+
+.inquiry-form input[type="file"] {
+    padding: 5px;
+}
+
+.agreement {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.submit-button,
+.cancel-button {
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+.cancel-button {
+    background-color: #ddd;
+    color: #333;
+    text-decoration: none;
+}
+
+.submit-button:hover {
+    background-color: #e05550;
+}
+
+.cancel-button:hover {
+    background-color: #ccc;
+}
+
+.admin-button {
+    display: inline-block; /* 인라인 블록으로 설정하여 패딩과 마진을 적용할 수 있게 함 */
+    padding: 5px 10px; /* 상하 10px, 좌우 20px 패딩 */
+    background-color: #000000; /* 배경색 */
+    color: rgb(255, 255, 255) !important; /* 텍스트 색상 */
+    border: none; /* 테두리 없음 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+    font-size: 14px; /* 글자 크기 */
+    transition: background-color 0.3s, transform 0.2s; /* 배경색과 변형 효과 전환 */
+    cursor: pointer; /* 커서 포인터로 변경 */
+    margin-right: 15px;
+}

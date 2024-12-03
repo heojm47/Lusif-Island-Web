@@ -1,0 +1,99 @@
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.inquiry-container {
+    text-align: center;
+}
+
+.inquiry-container h1 {
+    font-size: 32px;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.inquiry-description {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+
+.inquiry-sections {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.inquiry-section {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.inquiry-section:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.inquiry-section h2 {
+    font-size: 20px;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.inquiry-section p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    min-height: 45px;
+}
+
+.inquiry-button {
+    display: inline-block;
+    background: #000000;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.inquiry-button:hover {
+    background: #00000083;
+}
+
+
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .inquiry-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inquiry-section {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .inquiry-container h1 {
+        font-size: 28px;
+    }
+
+    .inquiry-description {
+        font-size: 14px;
+    }
+}

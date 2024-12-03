@@ -1,0 +1,102 @@
+
+/* src/styles/download.css */
+body{
+    font-family: 'Noto Sans KR', Arial, sans-serif;
+}
+
+main {
+    display: flex; /* Flexbox 사용 */
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    align-items: center; /* 가운데 정렬 */
+    margin-top: 20px; /* 상단 여백 */
+}
+
+.client-download {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/background2.jpg'); /* 어두운 오버레이 추가 */
+    background-size: cover;
+    background-position: center; /* 배경 이미지 중앙 정렬 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    padding: 110px 100px 100px 100px; /* 패딩 */
+    margin: 20px; /* 마진 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    color: white; /* 텍스트 색상 */
+    width: 100%; /* 너비 100% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    position: relative; /* 부모 요소에 상대 위치 추가 */
+    color: rgb(255, 255, 255); /* 텍스트 색상 변경 */
+}
+
+.client-check {
+    width: 100%; /* 너비 100% */
+    max-width: 800px; /* 최대 너비 설정 */
+    margin: 20px; /* 마진 */
+    padding: 20px; /* 패딩 */
+    background-color: #fff; /* 배경색 */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+.client-check table {
+    width: 100%; /* 테이블 너비 100% */
+    border-collapse: collapse; /* 경계선 겹치기 방지 */
+}
+
+.client-check th, .client-check td {
+    padding: 10px; /* 셀 패딩 */
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+    border-bottom: 1px solid #ddd; /* 아래쪽 경계선 추가 */
+    border-right: 1px solid #ddd; /* 오른쪽 경계선 추가 */
+}
+
+.client-check th:last-child, .client-check td:last-child {
+    border-right: none; /* 마지막 열의 오른쪽 경계선 제거 */
+}
+
+.client-check th {
+    background-color: #f2f2f2; /* 헤더 배경색 */
+}
+
+.title-container{
+    padding-top: 50px;
+}
+
+.client-title {
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 60px; /* Client 제목 크기 */
+    margin: 10px 0; /* 제목 마진 */
+    margin-right: 650px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.download-title {
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 60px; /* Download 제목 크기 */
+    margin: 10px 0; /* 제목 마진 */
+    margin-right: 560px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.856);
+}
+
+.button-client-download {
+    font-family: 'Noto Sans KR', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block; /* 인라인 블록 */
+    padding: 10px 20px; /* 버튼 패딩 */
+    background-color: rgba(0, 0, 0, 1); /* 버튼 배경색 (투명도 추가) */
+    border: 3px solid #ffffffab;
+    color: white; /* 버튼 텍스트 색상 */
+    text-decoration: none; /* 텍스트 장식 제거 */
+    border-radius: 12px; /* 버튼 모서리 둥글게 */
+    transition: background-color 0.3s; /* 배경색 전환 효과 */
+    transition: border 0.3s; /* 배경색 전환 효과 */
+    margin-right: 700px;
+    margin-top: 20px;
+    cursor: pointer; /* 마우스 커서 변경 */
+}
+
+.button-client-download:hover {
+    background-color: #e50914; /* 호버 시 배경색 */
+    border: 3px solid #ffffff;
+}

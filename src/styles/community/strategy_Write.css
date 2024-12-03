@@ -1,0 +1,8 @@
+.category select{
+    border: 1px solid #ddd;
+    background-color: #703e3e00;
+    color: #222;
+    padding: 5px; /* 드롭다운 메뉴의 패딩 */
+    font-size: 16px; /* 드롭다운 메뉴의 폰트 크기 */
+    margin-bottom: 10px;
+}

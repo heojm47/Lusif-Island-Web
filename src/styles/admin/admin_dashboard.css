@@ -1,0 +1,136 @@
+.main-content h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.widget {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.visitors-widget, .overview-widget {
+    grid-column: span 2;
+}
+
+.widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.widget-header h2, .widget-header h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+.widget-actions {
+    color: #666;
+}
+
+.refresh-btn {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.refresh-btn:hover {
+    opacity: 0.8;
+}
+
+.widget-content {
+    height: 300px;
+}
+
+/* 개요 위젯 스타일 */
+.overview-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    height: auto;
+    margin-top: -10px;
+}
+
+.stat-item {
+    border: 1px solid #e0e0e0;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 35px 25px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item i {
+    font-size: 24px;
+    color: #e50914;
+    margin-right: 15px;
+}
+
+.stat-info h3 {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 5px 0;
+}
+
+.stat-info p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+/* 클릭 가능한 위젯에 대한 호버 효과 강화 */
+.stat-item:nth-child(1),
+.stat-item:nth-child(3),  /* 총 게시글 */
+.stat-item:nth-child(4) { /* 미답변 문의 */
+    cursor: pointer;
+}
+
+.stat-item:nth-child(1):hover,
+.stat-item:nth-child(3):hover,
+.stat-item:nth-child(4):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: #f8f9fa;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+    .overview-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .overview-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .visitors-widget, .overview-widget {
+        grid-column: span 1;
+    }
+}

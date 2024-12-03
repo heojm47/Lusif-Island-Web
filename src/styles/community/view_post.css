@@ -1,0 +1,170 @@
+@import '../board.css';
+
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.view-post-content {
+    padding: 0px 10px 0px 10px;
+}
+
+.post-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.post-header h1 {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+}
+
+.post-info {
+    color: #666;
+    font-size: 14px;
+}
+
+.separator {
+    margin: 0 8px;
+    color: #ddd;
+}
+
+.post-content {
+    min-height: 60px;
+    line-height: 1.6;
+    margin-bottom: 0px;
+    padding: 20px 0;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.action-button {
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.action-button:hover {
+    background: #f5f5f5;
+}
+
+.comments-section {
+    margin-top: 30px;
+}
+
+.comment-form {
+    text-align: right;
+}
+
+.comment-form textarea {
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#submit-comment {
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 8px 16px;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.post-navigation {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.list-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #1a1a1a;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.list-button:hover {
+    background: #000;
+}
+
+.comment {
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.comment-header {
+    margin-bottom: 8px;
+}
+
+.comment-author {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.comment-date {
+    color: #666;
+    font-size: 14px;
+}
+
+.comment-text {
+    line-height: 1.4;
+}
+
+.delete-comment {
+    background: none;
+    border: none;
+    color: #ff4444;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
+.delete-comment:hover {
+    text-decoration: underline;
+}
+
+.post-images {
+    margin: 20px 0;
+}
+
+.post-images img {
+    max-width: 100%;
+    margin: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.board-header h1 a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.board-header h1 a:hover {
+    color: #666;
+    transition: color 0.2s ease;
+}

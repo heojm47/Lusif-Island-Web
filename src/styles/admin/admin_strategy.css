@@ -1,0 +1,199 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+}
+
+/* 메인 콘텐츠 스타일 */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.main-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar select,
+.search-bar input {
+    font-family: 'Noto Sans KR', sans-serif;
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #d40812;
+}
+
+/* 공지사항 리스트 스타일 */
+.notice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #ddd;
+}
+
+.notice-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.notice-type {
+    font-weight: bold;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* 공략게시판 카테고리 스타일 */
+.notice-type.boss {
+    background-color: #e74c3c; /* 빨간색 - 보스 */
+}
+
+.notice-type.battle {
+    background-color: #f39c12; /* 초록색 - 전투 */
+}
+
+.notice-type.ability {
+    background-color: #27ae60; /* 파란색 - 능력 */
+}
+
+/* 공지사항 타입 강조 */
+.notice-type.notice {
+    background-color: #000;
+    color: #fff;
+}
+
+.notice-type.maintenance {
+    background-color: #070000;
+    color: #fff;
+}
+
+.notice-title {
+    flex-grow: 1;
+    margin-left: 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.notice-title:hover {
+    text-decoration: underline;
+    color: #e50914;
+}
+
+.notice-date {
+    color: #999;
+}
+
+/* 페이지네이션 스타일 */
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pagination button {
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.pagination button.active {
+    background-color: #e50914;
+    color: #fff;
+    border-color: #e50914;
+}
+
+.pagination button:hover {
+    background-color: #f5f5f5;
+}
+
+.pagination button:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+/* 검색 필터 스타일 */
+.search-bar select {
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+/* 검색 버튼 Hover */
+.search-bar button:hover {
+    background-color: #b00811;
+    transition: background-color 0.3s;
+}
+
+/* 공지사항 리스트 hover 효과 */
+.notice-item:hover {
+    background-color: #f9f9f9;
+}
+
+.create-post-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+#create-post-btn {
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#create-post-btn:hover {
+    background-color: #b50811;
+}

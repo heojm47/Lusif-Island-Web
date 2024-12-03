@@ -1,0 +1,10 @@
+@import url('../header.css');
+@import url('hero.css');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}

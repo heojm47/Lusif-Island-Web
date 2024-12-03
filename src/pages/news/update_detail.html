@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lusif is Island - 업데이트 상세</title>
+    <link rel="stylesheet" href="../../styles/news/update.css">
+    <link rel="stylesheet" href="../../styles/news/update_detail.css">
+    <script src="../../scripts/news/update.js" defer></script>
+    <script src="../../scripts/news/update_detail.js"></script>
+    <script src="../../scripts/log-in/log-out.js"></script>
+    <script src="../../scripts/my-page.js"></script>
+    <script src="../../scripts/admin.js"></script>
+    <script src="../../scripts/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 상단 흰색 바 -->
+    <div class="top-bar">
+        <a href="#" class="logo"></a>
+        <div class="auth-links">
+            <a href="#" id="admin-dashboard-button" class="admin-button" style="display: none;">관리자 대시보드</a>
+            <button id="mypage-button" class="mypage-button" style="display:none;">
+                <img src="/src/assets/mypage.png" alt="My Page" class="mypage-icon">
+            </button>
+            <span class="divider" style="display:none;">〡</span>
+            <span id="welcome-message" class="welcome-message" style="display:none;"></span>
+            <a href="../log-in/log-in.html" id="login-button" class="login-button">로그인</a>
+            <span></span>
+            <a href="../log-in/signup.html" class="signup-button">회원가입</a>
+            <a href="#" id="logout" class="login-button" style="display:none;">로그아웃</a>
+        </div>
+    </div>
+    
+    <!-- 헤더 -->
+    <header>
+        <div class="header-content">
+            <a href="../../../public/index.html">
+                <img src="../../assets/logo.png" alt="Lusif is Island" class="logo">
+            </a>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="update.html">새소식</a></li>
+                    <li><a href="../info/ability.html">게임정보</a></li>
+                    <li><a href="../community/general.html">커뮤니티</a></li>
+                    <li><a href="../support/support.html">고객센터</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 드롭다운 -->
+    <div class="dropdown-container">
+        <div class="dropdown-content">
+            <ul>
+                <li><a href="notice.html">공지사항</a></li>
+                <li><a href="update.html">업데이트</a></li>
+            </ul>
+            <ul>
+                <li><a href="../info/ability.html">능력</a></li>
+                <li><a href="../info/worldview.html">세계관</a></li>
+            </ul>
+            <ul>
+                <li><a href="../community/general.html">자유</a></li>
+                <li><a href="../community/strategy.html">공략</a></li>
+            </ul>
+            <ul>
+                <li><a href="../download.html">클라이언트</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 이미지 배너 -->
+    <div class="image-banner">
+        <img src="../../assets/newbannertest.jpg" alt="Update Banner">
+    </div>
+
+    <!-- 업데이트 상세 내용 -->
+    <main class="content">
+        <div class="board-container">
+            <div class="board-header view_post">
+                <h1><a href="update.html" id="board-title">업데이트</a></h1>
+            </div>
+            <div class="update-header">
+                <span class="update-type" id="update-type">업데이트</span>
+                <h1 class="update-title" id="update-title">업데이트 제목</h1>
+            </div>
+            <div class="update-meta">
+                <span>작성자: <span id="author">관리자</span>
+                <span class="separator">|</span>
+                <span>작성일: <span id="created-date">2024.11.29</span>
+                <span class="separator">|</span>
+                <span>조회: <span id="views">123</span>
+            </div>
+            <div class="update-content" id="update-content">
+                <p>여기에 업데이트 본문 내용이 표시됩니다.</p>
+            </div>
+            <div class="attachment">
+                <span>첨부파일:</span>
+                <a href="#" id="attachment" download style="display:none;">첨부파일 다운로드</a>
+                <span id="no-attachment-message" style="display:none;"></span>
+            </div>
+            <div class="back-button-container">
+                <a href="javascript:history.back();" class="back-button">목록</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

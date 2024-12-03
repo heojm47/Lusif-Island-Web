@@ -1,0 +1,215 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #ffffff; /* 헤더 배경색 */
+    padding: 10px 350px; /* 패딩 */
+}
+
+.logo-link {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: -10px;
+    
+}
+
+.logo-image {
+    width: 100px;
+    height: auto;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* 로고와 버튼 그룹 양쪽 배치 */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 화면 중앙 정렬 */
+    padding-left: 50px; /* 전체 오른쪽 패딩 추가 */
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 버튼 간의 간격 조정 */
+    flex-wrap: nowrap;
+    margin-right: 30px; /* 버튼 그룹 전체를 오른쪽으로 이동 */
+}
+
+
+.auth-button {
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    font-weight: 1000;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* 줄바꿈 방지 */
+}
+
+.auth-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.divider {
+    color: rgb(63, 63, 63);
+    margin: 0 3px;
+}
+
+.mypage-icon {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 1px; /* 텍스트와 간격 추가 */
+}
+
+.mypage-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    white-space: nowrap; /* 줄바꿈 방지 */
+    
+}
+
+.welcome-message {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    margin-right: 10px; /* 버튼과의 간격 조정 */
+    white-space: nowrap; /* 줄바꿈 방지 */
+}
+
+.banner {
+    width: 100%;
+    min-height: 300px;
+    background-image: url('../../assets/Sup.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.banner-content {
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-content h1 {
+    font-size: clamp(24px, 5vw, 36px);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+
+.search-inquiry-container {
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 변경 */
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 15px;
+}
+
+.search-container {
+    width: 100%;
+    max-width: 500px; /* 검색창 최대 너비 설정 */
+    position: relative;
+    padding: 0 20px;
+}
+
+.inquiry-lists {
+    position: static;
+    background-color: rgba(0, 0, 0, 0.781);
+    backdrop-filter: blur(10px); /* 블러 효과 추가 */
+    -webkit-backdrop-filter: blur(10px); /* Safari 지원 */
+    color: rgb(255, 255, 255);
+    padding: 15px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    white-space: nowrap;
+    margin: 0 auto; /* 가운데 정렬을 위해 추가 */
+    outline: 3px solid #ffffff00;
+    transition: outline 0.3s; 
+}
+
+.inquiry-lists:hover {
+    outline: 3px solid #ffffff;
+}
+
+.element-input {
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 36px;
+    font-size: 13px;
+    color: #333;
+    line-height: normal;
+    font-weight: normal;
+    border-radius: 30px;
+    border: 1px solid #d4d6d9;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 8px 15px 8px 35px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.search-icon {
+    position: absolute;
+    left: 33px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        padding: 20px;
+    }
+
+    .search-container {
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    .inquiry-lists {
+        margin: 10px auto; /* 모바일에서도 가운데 정렬 유지 */
+    }
+}
+
+.title-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.title-link:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lusif is Island - 능력</title>
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/info/ability.css">
+    <script src="../../scripts/script.js"></script>
+    <script src="../../scripts/log-in/log-out.js"></script>
+    <script src="../../scripts/my-page.js"></script>
+    <script src="../../scripts/admin.js"></script>
+    <script src="../../scripts/ability.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 상단 흰색 바 -->
+    <div class="top-bar">
+        <a href="#" class="logo"></a>
+        <div class="auth-links">
+            <a href="#" id="admin-dashboard-button" class="admin-button" style="display: none;">관리자 대시보드</a>
+            <button id="mypage-button" class="mypage-button" style="display:none;">
+                <img src="/src/assets/mypage.png" alt="My Page" class="mypage-icon">
+            </button>
+            <span class="divider" style="display:none;">〡</span>
+            <span id="welcome-message" class="welcome-message" style="display:none;"></span> <!-- 환영 메시지 추가 -->
+            <a href="../log-in/log-in.html" id="login-button" class="login-button">로그인</a>
+            <span></span>
+            <a href="../log-in/signup.html" class="signup-button">회원가입</a>
+            <a href="#" id="logout" class="login-button" style="display:none;">로그아웃</a>
+        </div>
+    </div>
+    
+    <header>
+        <div class="header-content">
+            <a href="../../../public/index.html">
+                <img src="../../assets/logo.png" alt="Lusif is Island" class="logo">
+            </a>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="../news/notice.html">새소식</a></li>
+                    <li><a href="../info/ability.html">게임정보</a></li>
+                    <li><a href="../community/general.html">커뮤니티</a></li>
+                    <li><a href="../support/support.html">고객센터</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="dropdown-container">
+        <div class="dropdown-content">
+            <ul>
+                <li><a href="../news/notice.html">공지사항</a></li>
+                <li><a href="../news/update.html">업데이트</a></li>
+            </ul>
+            <ul>
+                <li><a href="./ability.html">능력</a></li>
+                <li><a href="./worldview.html">세계관</a></li>
+            </ul>
+            <ul>
+                <li><a href="../community/general.html">자유</a></li>
+                <li><a href="../community/strategy.html">공략</a></li>
+            </ul>
+            <ul>
+                <li><a href="../download.html">클라이언트</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 클래스 소개 섹션 -->
+    <main class="content-wrapper">
+        <section class="class-intro">
+            </div>
+            <div class="class-description">
+                <h1>마법사</h1>
+                <p>마법사는 신비로운 마법의 힘을 다루며,<br>강력한 주문으로 적을 제압하고 아군을 지원하는<br>지혜로운 마법의 대가입니다.<br>다양한 속성의 마법을 통해 전투에서 전략적인 우위를<br>점할 수 있습니다.</p>
+                <h1>SKILLS</h1>
+                <div class="skills-container">
+                    <div class="skill-box" onclick="openPopup('fire', this)">
+                        <div class="skill-icon">
+                            <img src="../../assets/fire-skill.gif" alt="Fire Skill">
+                        </div>
+                        <div class="skill-name">화염 스킬</div>
+                    </div>
+                    <div class="skill-box" onclick="openPopup('ice', this)">
+                        <div class="skill-icon">
+                            <img src="../../assets/ice-skill.gif" alt="Ice Skill">
+                        </div>
+                        <div class="skill-name">얼음 스킬</div>
+                    </div>
+                    <div class="skill-box" onclick="openPopup('lightning', this)">
+                        <div class="skill-icon">
+                            <img src="../../assets/lightning-skill.gif" alt="Lightning Skill">
+                        </div>
+                        <div class="skill-name">번개 스킬</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 팝업 구조 -->
+    <div id="skill-popup" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+            <span class="close-button" onclick="closePopup()">&times;</span>
+            <h2 id="skill-title">스킬 이름</h2>
+        </div>
+            <div class="popup-padding">
+                <div id="skill-videos">
+                  <!-- 로컬 비디오 예시 -->
+                    <video controls width="600">
+                       <source src="../../assets/video/fire1cut.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                <!-- 다른 비디오들 -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

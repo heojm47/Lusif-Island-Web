@@ -1,0 +1,8 @@
+.category {
+    margin-right: 20px; /* 카테고리와 정렬 옵션 사이의 간격 */
+}
+
+.category select {
+    padding: 5px; /* 드롭다운 메뉴의 패딩 */
+    font-size: 16px; /* 드롭다운 메뉴의 폰트 크기 */
+}

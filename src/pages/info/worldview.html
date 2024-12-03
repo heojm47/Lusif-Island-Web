@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lusif is Island - 능력</title>
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/info/worldview.css">
+    <script src="../../scripts/script.js"></script>
+    <script src="../../scripts/log-in/log-out.js"></script>
+    <script src="../../scripts/my-page.js"></script>
+    <script src="../../scripts/admin.js"></script>
+    <script src="../../scripts/ability.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 상단 흰색 바 -->
+    <div class="top-bar">
+        <a href="#" class="logo"></a>
+        <div class="auth-links">
+            <a href="#" id="admin-dashboard-button" class="admin-button" style="display: none;">관리자 대시보드</a>
+            <button id="mypage-button" class="mypage-button" style="display:none;">
+                <img src="/src/assets/mypage.png" alt="My Page" class="mypage-icon">
+            </button>
+            <span class="divider" style="display:none;">〡</span>
+            <span id="welcome-message" class="welcome-message" style="display:none;"></span> <!-- 환영 메시지 추가 -->
+            <a href="../log-in/log-in.html" id="login-button" class="login-button">로그인</a>
+            <span></span>
+            <a href="../log-in/signup.html" class="signup-button">회원가입</a>
+            <a href="#" id="logout" class="login-button" style="display:none;">로그아웃</a>
+        </div>
+    </div>
+    
+    <header>
+        <div class="header-content">
+            <a href="../../../public/index.html">
+                <img src="../../assets/logo.png" alt="Lusif is Island" class="logo">
+            </a>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="../news/notice.html">새소식</a></li>
+                    <li><a href="../info/ability.html">게임정보</a></li>
+                    <li><a href="../community/general.html">커뮤니티</a></li>
+                    <li><a href="../support/support.html">고객센터</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="dropdown-container">
+        <div class="dropdown-content">
+            <ul>
+                <li><a href="../news/notice.html">공지사항</a></li>
+                <li><a href="../news/update.html">업데이트</a></li>
+            </ul>
+            <ul>
+                <li><a href="./ability.html">능력</a></li>
+                <li><a href="./worldview.html">세계관</a></li>
+            </ul>
+            <ul>
+                <li><a href="../community/general.html">자유</a></li>
+                <li><a href="../community/strategy.html">공략</a></li>
+            </ul>
+            <ul>
+                <li><a href="../download.html">클라이언트</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="content-wrapper">
+        <!-- 메인 비주얼 영역 -->
+        <section class="main-visual">
+            <div class="video-overlay"></div>
+            <div class="visual-content">
+                <h1 class="title">LUCIF'S ISLAND</h1>
+                <div class="lore-content">
+                    <p class="lore-text">
+                        태초부터 '루시프의 섬'은 사계절의 정령들이 다스리는 신비로운 낙원이었습니다.<br>
+봄의 생명력, 여름의 열정, 가을의 풍요, 겨울의 고요가 완벽한 조화를 이루며,<br>
+정령들은 이 섬의 수호자로서 자연의 질서를 지켜왔습니다.<br><br>
+
+하지만 어느 날, 심연의 균열로부터 스며든 혼돈의 기운이 섬을 침식하기 시작했습니다.<br>
+순수했던 정령들은 하나둘 어둠에 물들어갔고, 그들의 힘이 약해질수록<br>
+섬에서는 계절의 흐름이 멈추고 자연의 빛이 사그라들었습니다.<br><br>
+
+고대로부터 정령들과 교감하며 섬을 지켜온 수호자의 후계자인 당신,<br>
+이제 원소의 힘을 깨우고 타락한 정령들을 정화하여<br>
+잃어버린 사계절의 조화를 되찾아야 합니다.<br><br>
+
+섬의 운명이 당신의 손에 달려있습니다.
+                    </p>
+                </div>
+            </div>
+        </section>        
+    </main>
+</body>
+</html>

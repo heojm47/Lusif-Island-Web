@@ -1,0 +1,280 @@
+@import '../header.css';
+@import '../imagestyles.css';
+@import url('../board.css');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.search-filter {
+    width: 99px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-right: none;
+    font-size: 16px;
+    background-color: #703e3e00;
+    color: #222;
+    font-weight: 500;
+    cursor: pointer;
+    border-right: none;
+}
+
+.category select{
+    border: 1px solid #ddd;
+    background-color: #703e3e00;
+    color: #222;
+}
+
+.post-list {
+    margin-bottom: 20px;
+}
+
+.post-item {
+    padding: 10px;
+    margin: 0px 0;
+    background-color: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.post-item:hover {
+    background-color: #f9f9f9;
+    transition: background-color 0.2s ease;
+}
+
+.post-item:last-child {
+    border-bottom: 1px solid #ddd;
+}
+
+.post-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.post-title a {
+    text-decoration: none;
+    color: #333; /* 읽지 않은 글은 검정색에 가까운 색상 */
+}
+
+.post-title a:visited {
+    color: #888; /* 읽은 글은 회색 */
+}
+
+.post-title a:hover {
+    text-decoration: underline; /* 마우스 오버시 밑줄 */
+}
+
+.post-info-list {
+    font-size: 14px;
+    color: #666;
+    margin: 7px 0;
+}
+
+.post-info-list span:not(.separator) {
+    display: inline-block;
+    text-align: center;
+    width: 50px;  /* 기본 너비 설정 */
+    margin-right: 0px;
+}
+
+/* 작성자 */
+.post-info-list span:first-of-type {
+    width: 50px;  /* 작성자는 조금 더 넓게 */
+}
+
+/* 마지막 요소(시간)의 오른쪽 마진 제거 */
+.post-info-list span:last-of-type {
+    margin-right: 10px;
+    width: 70px;
+}
+
+
+
+.post-divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.write-post {
+    text-align: right; /* 우측 정렬 */
+    margin-top: 20px; /* 위쪽 여백 */
+    
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 10px;
+    margin: 0 10px;
+}
+
+.page-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    min-width: 35px; 
+    min-height: 35px;
+    justify-content: center;  /* 중앙 정렬 추가 */
+    padding: 8px 12px;       /* padding 통일 */
+    transition: all 0.2s ease;
+}
+
+.page-btn i {
+    font-size: 12px;
+}
+
+/* 페이지 번호 버튼 */
+.page-numbers button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    min-width: 35px;
+    min-height: 35px;
+    transition: all 0.2s ease;
+}
+
+.page-numbers button.active {
+    background-color: #1a1a1a;
+    color: white;
+    border-color: #1a1a1a;
+}
+
+.page-btn:hover:not(:disabled),
+.page-numbers button:hover:not(.active) {
+    background-color: #f0f0f0;
+    border-color: #999;
+}
+
+.page-btn:disabled {
+    background-color: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+    border-color: #ddd;
+}
+
+.styled-button {
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 10px 13px;
+    background-color: #1a1a1a; /* 버튼 배경색 */
+    color: white; /* 글자색 */
+    border: 1px solid #1a1a1a; /* 테두리 색상 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.styled-button:hover {
+    background-color: #000000; /* 호버 시 색상 변경 */
+}
+
+/*여기부터는 뤠디오 붜른 */
+.sort-options {
+    line-height: 31px;
+    margin-bottom: 20px;
+}
+
+.sort-options label {
+    margin-right: 20px; /* 오른쪽 마진을 추가하여 간격을 넓힘 */
+}
+
+.sort-options input[type="radio"] {
+    display: none; /* 기본 라디오 버튼 숨기기 */
+}
+
+.sort-options .icon {
+    font-size: 1.2em; /* 아이콘 크기 조정 */
+    color: #ccc; /* 기본 색상 */
+    transition: color 0.3s; /* 색상 전환 효과 */
+    cursor: pointer; /* 아이콘 클릭 가능하도록 커서 변경 */
+}
+
+.sort-options input[type="radio"]:checked + .icon {
+    color: #000000; /* 체크된 상태의 색상 */
+}
+
+.sort-options input[type="radio"]:checked + .icon i {
+    content: "\f00c"; /* 체크 아이콘으로 변경 */
+    font-family: "Font Awesome 5 Free"; /* Font Awesome 폰트 패밀리 */
+    font-weight: 900; /* 체크 아이콘 두께 */
+}
+
+.sort-options .icon {
+    font-size: 1.2em; /* 아이콘 크기 조정 */
+    color: #ccc; /* 기본 색상 */
+    transition: color 0.3s; /* 색상 전환 효과 */
+    cursor: pointer; /* 아이콘 클릭 가능하도록 커서 변경 */
+}
+
+.sort-options .icon i.fa-circle {
+    font-size: 5px; /* fa-circle 아이콘 크기 줄이기 */
+    vertical-align: middle;
+}
+
+.sort-options {
+    display: flex; /* 플렉스 박스를 사용하여 요소를 가로로 배치 */
+    align-items: center; /* 수직 정렬 */
+}
+
+.post-title .fa-image,
+.post-title .fa-comment-dots {
+    color: #666;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+/* 검색 결과 없음 스타일 */
+.no-results {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.board-header h1 a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.board-header h1 a:hover {
+    color: #666;
+    transition: color 0.2s ease;
+}
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인증코드 입력</title>
+    <link rel="stylesheet" href="../../styles/log-in/verify-email.css">
+    <script src="../../scripts/log-in/verify-email.js"></script>
+</head>
+<body>
+    <div class="verify-container">
+        <h2>인증코드 입력</h2>
+        <p id="email-info">***@example.com 이메일 주소로 전송된 코드를 입력해 주세요.</p>
+        <div class="code-inputs">
+            <input type="text" maxlength="1" class="code-input" required>
+            <input type="text" maxlength="1" class="code-input" required>
+            <input type="text" maxlength="1" class="code-input" required>
+            <input type="text" maxlength="1" class="code-input" required>
+            <input type="text" maxlength="1" class="code-input" required>
+            <input type="text" maxlength="1" class="code-input" required>
+        </div>
+        <button id="verify-button">확인</button>
+        <div class="instructions">
+            <p>확인코드를 받지 못했을 때</p>
+            <ul>
+                <li>스팸메일 폴더를 확인해 주세요.</li>
+                <li>통신 사업자 설정에서 수신 거부로 설정되어 있지 않은지 확인해 주세요.</li>
+                <li>이메일 주소가 정확하게 기재되었는지 확인해 주세요.</li>
+            </ul>
+            <p>이메일 주소를 잘못 기재했을 때는 올바른 이메일 주소로 계정 만들기부터 다시 시도해 주세요.</p>
+            <a href="./signup.html">새로운 계정 만들기</a>
+        </div>
+    </div>
+</body>
+</html>

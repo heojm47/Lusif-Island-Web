@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lusif is Island - 공지사항</title>
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/download.css">
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/log-in/log-out.js"></script>
+    <script src="../scripts/my-page.js"></script>
+    <script src="../scripts/admin.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top-bar">
+        <a href="#" class="logo"></a>
+        <div class="auth-links">
+            <a href="#" id="admin-dashboard-button" class="admin-button" style="display: none;">관리자 대시보드</a>
+            <button id="mypage-button" class="mypage-button" style="display:none;">
+                <img src="/src/assets/mypage.png" alt="My Page" class="mypage-icon">
+            </button>
+            <span class="divider" style="display:none;">〡</span>
+            <span id="welcome-message" class="welcome-message" style="display:none;"></span> <!-- 환영 메시지 추가 -->
+            <a href="./log-in/log-in.html" id="login-button" class="login-button">로그인</a>
+            <span></span>
+            <a href="./log-in/signup.html" class="signup-button">회원가입</a>
+            <a href="#" id="logout" class="login-button" style="display:none;">로그아웃</a>
+        </div>
+    </div>
+    
+    <header>
+        <div class="header-content">
+            <a href="../../public/index.html">
+                <img src="../assets/logo.png" alt="Lusif is Island" class="logo">
+            </a>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="./news/notice.html">새소식</a></li>
+                    <li><a href="./info/ability.html">게임정보</a></li>
+                    <li><a href="./community/general.html">커뮤니티</a></li>
+                    <li><a href="./support/support.html">고객센터</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="dropdown-container">
+        <div class="dropdown-content">
+            <ul>
+                <li><a href="./news/notice.html">공지사항</a></li>
+                <li><a href="./news/update.html">업데이트</a></li>
+            </ul>
+            <ul>
+                <li><a href="./info/ability.html">능력</a></li>
+                <li><a href="./info/worldview.html">세계관</a></li>
+            </ul>
+            <ul>
+                <li><a href="./community/general.html">자유</a></li>
+                <li><a href="./community/strategy.html">공략</a></li>
+            </ul>
+            <ul>
+                <li><a href="download.html">클라이언트</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <main>
+        <div class="client-download">
+            <div class="title-container">
+                <h1 class="client-title">CLIENT</h1>
+                <h1 class="download-title">DOWNLOAD</h1>
+            </div>
+            <button onclick="startDownload()" class="button-client-download">
+                다운로드
+            </button> <!-- 다운로드 버튼 추가 -->
+        </div>
+        <div class="client-check">
+            <h3>권장 PC 사양 안내</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="category" scope="col">항목</th>
+                        <th class="min" scope="col">최소사양</th>
+                        <th class="max" scope="col">권장사양</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="category">운영체제</th>
+                        <td class="min" colspan="2">Windows 10권장 (Windows 7 sp1 이상 지원, 64bit 운영체제만 지원)</td>
+                    </tr>
+                    <tr>
+                        <th class="category">CPU</th>
+                        <td class="min">Intel i3이상 <span class="or">/</span> Ryzen 3이상</td>
+                        <td class="max">Intel i5이상 <span class="or">/</span> Ryzen 5이상</td>
+                    </tr>
+                    <tr>
+                        <th class="category">그래픽카드</th>
+                        <td class="min">NVIDIA GeForce GTX 460 혹은 <br> AMD Radeon HD 6850 이상</td>
+                        <td class="max data">
+                            <ul>
+                                <li>
+                                    <em>1080P FHD</em><br>
+                                    NVIDIA GeForce GTX 1050 <br>AMD Radeon RX560 2G 이상
+                                </li>
+                                <li>
+                                    <em>1440P QHD</em><br>
+                                    NVIDIA GeForce RTX 2070 <br>AMD Radeon RX5700XT 이상
+                                </li>
+                                <li>
+                                    <em>Ultra Specs (4K, UHD)</em><br>
+                                    NVIDIA GeForce RTX 2080 <br>AMD Radeon RX 6800 이상
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="category">RAM</th>
+                        <td class="min">8GB 이상</td>
+                        <td class="max">16GB 이상</td>
+                    </tr>
+                    <tr>
+                        <th class="category">DirectX</th>
+                        <td class="min" colspan="2">DirectX 11 이상</td>
+                    </tr>
+                    <tr>
+                        <th class="category">설치 용량</th>
+                        <td class="min" colspan="2">80GB 이상</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    
+    <script>
+        function startDownload() {
+            fetch('/download-game')
+                .then(response => response.blob())
+                .then(blob => {
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = "Lucif's Island.zip";
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    document.body.removeChild(a);
+                })
+                .catch(error => {
+                    console.error('다운로드 중 오류 발생:', error);
+                    alert('다운로드 중 오류가 발생했습니다.');
+                });
+        }
+    </script>
+
+</body>
+</html>

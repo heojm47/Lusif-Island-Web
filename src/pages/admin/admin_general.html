@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자유게시판 관리 - 관리자 대시보드</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/admin/sidebar.css">
+    <link rel="stylesheet" href="../../styles/admin/admin_general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../../scripts/admin/admin_general.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h1>대시보드</h1>
+            <ul>
+                <li><a href="admin_dashboard.html"><i class="fas fa-home"></i> 메인</a></li>
+                <li><a href="admin_user_management.html"><i class="fas fa-users"></i> 사용자 관리</a></li>
+                <li><a href="admin_content_management.html" class="active"><i class="fas fa-file-alt"></i> 컨텐츠 관리</a></li>
+                <li><a href="admin_customer_support.html"><i class="fas fa-headset"></i> 고객지원</a></li>
+                <li class="logout"><a href="/public/index.html"><i class="fas fa-sign-out-alt"></i> 나가기</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <h2>자유게시판 관리</h2>
+            
+           
+            <!-- 검색 및 필터 -->
+            <div class="search-bar">
+                <select id="filter-type">
+                    <option value="general">자유게시판</option>
+                </select>
+                <input type="text" id="search-input" placeholder="검색어를 입력하세요">
+                <button id="search-btn">검색</button>
+            </div>
+            
+            <!-- 공지사항 목록 -->
+            <ul class="notice-list" id="notice-list">
+                <!-- 동적으로 추가될 공지사항 항목 -->
+            </ul>
+            
+            <!-- 페이지네이션 -->
+            <div class="pagination" id="pagination">
+                <!-- 동적으로 추가될 페이지네이션 -->
+            </div>
+        </main>
+    </div>
+</body>
+</html>

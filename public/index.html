@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lusif's Island - 공식 웹사이트</title>
+    <link rel="stylesheet" href="../src/styles/main/base.css">
+    <script src="../src/scripts/script.js"></script>
+    <script src="../src/scripts/log-in/log-out.js"></script>
+    <script src="../src/scripts/my-page.js"></script>
+    <script src="../src/scripts/admin.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 상단 흰색 바 -->
+    <div class="top-bar">
+        <a href="#" class="logo"></a>
+        <div class="auth-links">
+            <a href="#" id="admin-dashboard-button" class="admin-button" style="display: none;">관리자 대시보드</a>
+            <button id="mypage-button" class="mypage-button" style="display:none;">
+                <img src="/src/assets/mypage.png" alt="My Page" class="mypage-icon">
+            </button>
+            <span class="divider" style="display:none;">〡</span>
+            <span id="welcome-message" class="welcome-message" style="display:none;"></span> <!-- 환영 메시지 추가 -->
+            <a href="../src/pages/log-in/log-in.html" id="login-button" class="login-button">로그인</a>
+            <span></span>
+            <a href="../src/pages/log-in/signup.html" class="signup-button">회원가입</a>
+            <a href="#" id="logout" class="login-button" style="display:none;">로그아웃</a>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <a href="../public/index.html">
+                <img src="../src/assets/logo.png" alt="Lusif is Island" class="logo">
+            </a>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="../src/pages/news/notice.html">새소식</a></li>
+                    <li><a href="../src/pages/info/ability.html">게임정보</a></li>
+                    <li><a href="../src/pages/community/general.html">커뮤니티</a></li>
+                    <li><a href="../src/pages/support/support.html">고객센터</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="dropdown-container">
+        <div class="dropdown-content">
+            <ul>
+                <li><a href="../src/pages/news/notice.html">공지사항</a></li>
+                <li><a href="../src/pages/news/update.html">업데이트</a></li>
+            </ul>
+            <ul>
+                <li><a href="../src/pages/info/ability.html">능력</a></li>
+                <li><a href="../src/pages/info/worldview.html">세계관</a></li>
+            </ul>
+            <ul>
+                <li><a href="../src/pages/community/general.html">자유</a></li>
+                <li><a href="../src/pages/community/strategy.html">공략</a></li>
+            </ul>
+            <ul>
+                <li><a href="../src/pages/download.html">클라이언트</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Lusif's Island</h1>
+            <p class="subtitle">새롭게 출시된 턴제 전략 시뮬레이션의 혁명</p>
+            <div class="cta-buttons">
+                <a href="../src/pages/info/worldview.html" class="cta-button primary">자세히 보기</a>
+                <a href="#trailer" class="cta-button secondary">트레일러 보기</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 트레일러 모달 -->
+    <div id="trailer-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="video-container">
+                <iframe id="youtube-frame" 
+                        width="960" 
+                        height="540" 
+                        src="" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        enablejsapi="1">
+                </iframe>
+            </div>
+        </div>
+    </div>    
+
+
+</body>
+</html>

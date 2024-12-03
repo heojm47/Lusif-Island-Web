@@ -1,0 +1,45 @@
+/* 카테고리 태그 스타일 */
+.category-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    margin-right: 8px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* 카테고리별 색상 */
+.category-tag[data-category="boss"] {
+    background-color: #e74c3c;  /* 빨간색 계열 */
+}
+
+.category-tag[data-category="battle"] {
+    background-color: #f39c12;  /* 주황색 계열 */
+}
+
+.category-tag[data-category="ability"] {
+    background-color: #27ae60;  /* 초록색 계열 */
+}
+
+/* 카테고리별 아이콘 */
+.category-tag[data-category="boss"]::before {
+    content: "👑 ";
+}
+
+.category-tag[data-category="battle"]::before {
+    content: "⚔️ ";
+}
+
+.category-tag[data-category="ability"]::before {
+    content: "✨ ";
+}
+
+/* 게시글 목록에서의 카테고리 태그 */
+.post-title .category-tag {
+    font-size: 13px;
+    padding: 2px 8px;
+    margin-right: 6px;
+    vertical-align: middle;
+}

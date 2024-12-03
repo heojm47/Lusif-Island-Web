@@ -1,0 +1,161 @@
+CREATE DATABASE main_DB;
+USE main_DB;
+
+CREATE TABLE customers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+ALTER TABLE customers 
+ADD COLUMN role ENUM('user', 'admin') DEFAULT 'user';
+
+INSERT INTO customers (name, email, password, role)  /*사용자, 관리자 역할 구분*/
+
+VALUES ('관리자', 'rkdtldnjs11@naver.com', '123', 'admin'); /*관리자 아이디 생성*/
+
+select *
+FROM customers;
+
+
+CREATE TABLE Notice /*공지사항 테이블*/(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    type ENUM('공지', '점검') NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    views INT DEFAULT 0,
+    image_path VARCHAR(255),   -- 이미지 경로 컬럼 추가
+    attachment VARCHAR(255)    -- 첨부파일 경로 컬럼 추가
+);
+-- 데이터 삽입 예시
+INSERT INTO Notice (title, content, type, created_at, views, image_path, attachment)
+VALUES ('공지 제목', '공지 내용', '공지', NOW(), 0, '/path/to/image.jpg', '/path/to/attachment.zip');
+
+
+ALTER TABLE Notice ADD COLUMN views INT DEFAULT 0;
+INSERT INTO Notice (title, content, type, created_at, views);
+
+select *
+FROM Notice;
+
+CREATE TABLE Updates (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    type VARCHAR(50) NOT NULL, -- 타입 컬럼 추가
+    views INT DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE Updates ADD COLUMN attachment VARCHAR(255) DEFAULT NULL;
+
+select *
+FROM updates;
+
+CREATE TABLE inquiries (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    game_info VARCHAR(255) NOT NULL,
+    inquiry_type VARCHAR(50) NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    attachment_path VARCHAR(500) DEFAULT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    status ENUM('open', 'closed', 'pending') DEFAULT 'open'
+);
+
+select *
+FROM inquiries;
+
+
+CREATE TABLE replies (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    inquiry_id INT NOT NULL,
+    content TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (inquiry_id) REFERENCES inquiries(id) ON DELETE CASCADE
+);
+
+select *
+FROM inquiries;
+
+CREATE TABLE posts (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    files TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    views INT DEFAULT 0,
+    likes INT DEFAULT 0,
+    FOREIGN KEY (author) REFERENCES customers(email)
+);
+
+select *
+FROM posts;
+
+CREATE TABLE post_likes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    post_id INT NOT NULL,
+    user_email VARCHAR(255) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE KEY unique_like (post_id, user_email),
+    FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE
+);
+
+CREATE TABLE comments (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    post_id INT NOT NULL,
+    content TEXT NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE,
+    FOREIGN KEY (author) REFERENCES customers(email)
+);
+
+CREATE TABLE strategy_posts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    category ENUM('boss', 'battle', 'ability') NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    files TEXT,  -- 파일 첨부를 위한 컬럼 추가
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    views INT DEFAULT 0,
+    likes INT DEFAULT 0,
+    FOREIGN KEY (author) REFERENCES customers(email) ON DELETE CASCADE
+);
+
+select *
+FROM strategy_posts;
+
+-- 공략 게시글 좋아요 테이블 추가
+CREATE TABLE strategy_likes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    post_id INT NOT NULL,
+    user_email VARCHAR(255) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE KEY unique_strategy_like (post_id, user_email),
+    FOREIGN KEY (post_id) REFERENCES strategy_posts(id) ON DELETE CASCADE,
+    FOREIGN KEY (user_email) REFERENCES customers(email) ON DELETE CASCADE
+);
+
+CREATE TABLE strategy_comments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    post_id INT NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (post_id) REFERENCES strategy_posts(id) ON DELETE CASCADE,
+    FOREIGN KEY (author) REFERENCES customers(email) ON DELETE CASCADE
+);
+
+
+
+
+

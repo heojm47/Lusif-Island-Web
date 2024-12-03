@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 - Lusif is Island</title>
+    <link rel="stylesheet" href="../../styles/log-in/log-in.css">
+    <script src="../../scripts/log-in/log-in.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo-container">
+                <a href="/public/index.html">
+                    <img src="../../assets/SupLogo.png" alt="Lusif is Island" class="login-logo">
+                </a>
+            </div>
+            <h2>로그인</h2>
+            <form id="loginForm" action="/login" method="post">
+                <div class="input-group">
+                    <label for="email">아이디 (이메일)</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="login-button">로그인</button>
+                <div class="help-links">
+                    <a href="#" onclick="openIdRecoveryPopup()">아이디 찾기</a>
+                    <a href="#" onclick="openPasswordRecoveryPopup()">비밀번호 찾기</a>
+                    <a href="signup.html">회원가입</a>
+                </div>
+            </form>
+            <div id="error-message" style="color: red; display: none;">아이디 또는 비밀번호가 틀립니다.</div>
+        </div>
+    </div>
+
+    <!-- 아이디 찾기 팝업 -->
+    <div id="id-recovery-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <h2>아이디 찾기</h2>
+            <form id="id-recovery-form" onsubmit="recoverId(event)">
+                <div class="input-group">
+                    <label for="username">사용자 이름:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <button type="submit" class="auth-button">아이디 찾기</button>
+                <p id="recovery-message"></p>
+            </form>
+            <button class="close-button" onclick="closeIdRecoveryPopup()">닫기</button>
+        </div>
+    </div>
+
+    <!-- 비밀번호 찾기 팝업 -->
+    <div id="password-recovery-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <h2>비밀번호 찾기</h2>
+            <form id="password-recovery-form" onsubmit="sendPasswordResetCode(event)">
+                <div class="input-group">
+                    <label for="recovery-email">이메일:</label>
+                    <input type="email" id="recovery-email" name="recoveryEmail" required>
+                </div>
+                <button type="submit" class="auth-button">인증 코드 전송</button>
+                <p id="password-recovery-message"></p>
+            </form>
+            <div class="input-group" id="code-verification-group" style="display: none;">
+                <label for="verification-code">인증 코드:</label>
+                <input type="text" id="verification-code" name="verificationCode">
+                <button class="auth-button" onclick="verifyCode()">인증 코드 확인</button>
+                <p id="verification-message"></p>
+            </div>
+            <div class="input-group" id="new-password-group" style="display: none;">
+                <label for="new-password">새 비밀번호:</label>
+                <input type="password" id="new-password" name="newPassword">
+                <label for="confirm-new-password">새 비밀번호 확인:</label>
+                <input type="password" id="confirm-new-password" name="confirmNewPassword">
+                <button class="auth-button" onclick="resetPassword()">비밀번호 재설정</button>
+            </div>
+            <button class="close-button" onclick="closePasswordRecoveryPopup()">닫기</button>
+        </div>
+    </div>
+</body>
+</html>

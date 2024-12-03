@@ -1,0 +1,104 @@
+@import url('base.css');
+
+.update-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: -5px;
+}
+
+.update-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.update-version {
+    background-color: #000000;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-right: 15px;
+}
+
+.update-title {
+    flex-grow: 1;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.update-date {
+    color: #000000;
+    font-size: 14px;
+}
+
+.update-list .no-data {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 20px 0;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+#pagination {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#pagination .page-numbers {
+    display: flex;
+    gap: 5px;
+    margin: 0 10px;
+}
+
+#pagination button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    min-width: 35px;
+    min-height: 35px;
+    transition: all 0.2s ease;
+}
+
+#pagination button.active {
+    background-color: #1a1a1a;
+    color: white;
+    border-color: #1a1a1a;
+}
+
+
+#pagination button:disabled {
+    background-color: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+    border-color: #ddd;
+}
+
+#pagination button:hover:not(:disabled):not(.active) {
+    background-color: #f0f0f0;
+    border-color: #999;
+}
+
+.board-header h1 a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.board-header h1 a:hover {
+    color: #666;
+    transition: color 0.2s ease;
+}

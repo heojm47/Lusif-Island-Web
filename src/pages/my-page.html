@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lusif's Island - 공식 웹사이트</title>
+    
+    <!-- 외부 CSS 파일 링크 -->
+    <link rel="stylesheet" href="../styles/my-page.css">
+
+    <!-- 외부 JavaScript 파일 연결 -->
+    <script src="../scripts/log-in/log-out.js"></script>
+    <script src="../scripts/my-page.js"></script>
+    <script src="../scripts/admin.js"></script>
+    <script src="../scripts/my-page(1).js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 상단 흰색 바 -->
+    <div class="top-bar">
+        <a href="../../public/index.html" class="logo">
+            <img src="/src/assets/SupLogo.png" alt="Lusif is Island" class="logo-img">
+        </a>
+        <div class="auth-links">
+            <a href="#" id="admin-dashboard-button" class="admin-button" style="display: none;">관리자 대시보드</a>
+            <button id="mypage-button" class="mypage-button" style="display:none;">
+                <img src="/src/assets/mypage.png" alt="My Page" class="mypage-icon">
+            </button>
+            <span class="divider" style="display:none;">〡</span>
+            <span id="welcome-message" class="welcome-message" style="display:none;"></span>
+            <a href="./log-in/log-in.html" id="login-button" class="login-button">로그인</a>
+            <span></span>
+            <a href="./log-in/signup.html" class="signup-button">회원가입</a>
+            <a href="#" id="logout" class="login-button" style="display:none;">로그아웃</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">내정보 관리</div>
+
+        <div class="content">
+            <div class="sidebar">
+                <h3>내정보 관리</h3>
+                <ul>
+                    <li><a href="#" id="change-info-link">개인정보 변경</a></li>
+                    <li><a href="#" id="change-password-link">비밀번호 변경</a></li>
+                    <li><a href="#" id="delete-account-link">회원 탈퇴</a></li>
+                </ul>
+            </div>
+            
+            <div class="main-content">
+                <h2>개인정보 변경</h2>
+                <p>고객님의 개인정보 보호를 위해 최선을 다하겠습니다.</p>
+
+                <div class="form-container">
+                    <h3>본인확인</h3>
+                    <p>고객님의 소중한 개인정보 보호를 위해 본인확인을 진행합니다.</p>
+                    <label for="password">비밀번호 입력</label>
+                    <input type="password" id="password" placeholder="비밀번호 입력">
+                    <button type="button" id="verify-button">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

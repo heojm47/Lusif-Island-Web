@@ -1,0 +1,12 @@
+@import '../imagestyles.css';
+@import '../header.css';
+@import url('../board.css');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+

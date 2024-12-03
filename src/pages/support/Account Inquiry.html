@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lusif's Island - 문의하기</title>
+    <link rel="stylesheet" href="../../styles/support/submit inquiry.css">
+    <script src="../../scripts/log-in/log-out.js"></script>
+    <script src="../../scripts/my-page.js"></script>
+    <script src="../../scripts/admin.js"></script>
+    <script src="../../scripts/support/inquiry.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+       <div class="header-content">
+            <a href="../../../public/index.html" class="logo-link">
+                <img src="../../assets/SupLogo.png" alt="Logo" class="logo-image">
+            </a>
+            <div class="auth-buttons">
+                <a href="#" id="admin-dashboard-button" class="admin-button" style="display: none;">관리자 대시보드</a>
+                <!-- 마이페이지 버튼 -->
+                <button id="mypage-button" class="mypage-button" style="display:none;">
+                    <img src="../../assets/mypage.png" alt="My Page" class="mypage-icon">
+                </button>
+                <span class="divider" style="display:none;">〡</span>
+                <!-- 환영 메시지 -->
+                <span id="welcome-message" class="welcome-message" style="display:none;">OOO님 환영합니다!</span>
+                <!-- 로그아웃 버튼 -->
+                <a href="#" id="logout" class="auth-button" style="display:none;">로그아웃</a>
+                <!-- 로그인/회원가입 -->
+                <a href="../log-in/log-in.html" id="login-button" class="auth-button">로그인</a>
+                <a href="../log-in/signup.html" class="auth-button signup-button">회원가입</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="banner-content">
+            <a href="support.html" class="title-link">
+                <h1>LUSIF'S ISLAND 고객센터</h1>
+            </a>
+            <div class="search-inquiry-container">
+                <div class="search-container">
+                    <input type="text" class="element-input" id="searchKey" placeholder="검색어를 입력하세요.">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <a href="Inquiry details.html" class="inquiry-lists">내 문의내역</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <section class="inquiry-form-section">
+            <h2>문의하기</h2>
+            <form id="inquiry-form" class="inquiry-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="email">이메일 주소</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="game">게임 정보</label>
+                    <select id="game" name="game" required>
+                        <option value="Lusif's Island">Lusif's Island</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="inquiry-type">문의 유형</label>
+                    <select id="inquiry-type" name="inquiryType" required>
+                        <option value="계정 생성/회원가입 문제">계정 생성/회원가입 문제</option>
+                        <option value="로그인 문제">로그인 문제</option>
+                        <option value="계정 정보 변경 요청">계정 정보 변경 요청</option>
+                        <option value="비밀번호 재설정/분실">비밀번호 재설정/분실</option>
+                        <option value="계정 보안 관련 문의">계정 보안 관련 문의</option>
+                        <option value="기타">기타</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="subject">문의 제목</label>
+                    <input type="text" id="subject" name="subject" placeholder="문의 제목을 입력하세요" required>
+                </div>
+                <div class="form-group">
+                    <label for="content">문의 내용</label>
+                    <textarea id="content" name="content" rows="5" placeholder="오류 내용 및 발생 시간 등을 입력하세요" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="file-upload">파일 첨부</label>
+                    <input type="file" id="file-upload" name="attachment" accept=".jpg, .png, .pdf">
+                    <small>최대 20MB 파일 첨부 가능</small>
+                </div>
+                <div class="form-group form-group-checkbox">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">개인정보 수집 및 이용에 동의합니다.</label>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="submit-button">문의하기</button>
+                    <a href="support.html" class="cancel-button">취소</a>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

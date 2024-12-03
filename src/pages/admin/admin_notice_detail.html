@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 상세 - 관리자 대시보드</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/admin/sidebar.css">
+    <link rel="stylesheet" href="../../styles/admin/admin_notice_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../../scripts/admin/admin_notice_detail.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h1>대시보드</h1>
+            <ul>
+                <li><a href="admin_dashboard.html"><i class="fas fa-home"></i> 메인</a></li>
+                <li><a href="admin_user_management.html"><i class="fas fa-users"></i> 사용자 관리</a></li>
+                <li><a href="admin_content_management.html"><i class="fas fa-file-alt"></i> 컨텐츠 관리</a></li>
+                <li><a href="admin_customer_support.html"><i class="fas fa-headset"></i> 고객지원</a></li>
+                <li class="logout"><a href="/public/index.html"><i class="fas fa-sign-out-alt"></i> 나가기</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <h2>공지사항 상세</h2>
+            <div class="notice-detail-container">
+                <div class="notice-header">
+                    <!-- 카테고리 타입 표시 -->
+                    <span class="notice-type" id="notice-type">공지</span>
+                    <h1 class="notice-title" id="notice-title">공지사항 제목</h1>
+                </div>
+                <div class="notice-meta">
+                    <span>작성자: <span id="author">관리자</span></span>
+                    <span>작성일: <span id="created-date">2024.11.29</span></span>
+                    <span>조회수: <span id="views">123</span></span>
+                </div>
+                <div class="notice-content" id="notice-content">
+                    <p>여기에 공지사항 본문 내용이 표시됩니다.</p>
+                </div>
+                <div class="attachment">
+                    <span>첨부파일:</span>
+                    <a href="#" id="attachment" download>첨부파일 다운로드</a>
+                </div>
+                <!-- 수정 및 삭제 버튼 -->
+                <div class="notice-actions">
+                    <button id="edit-notice-btn" class="edit-button">수정</button>
+                    <button id="delete-notice-btn" class="delete-button">삭제</button>
+                </div>
+                <div class="back-button-container">
+                    <a href="admin_notices.html" class="back-button">목록으로 돌아가기</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

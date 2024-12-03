@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컨텐츠 관리 - 관리자 대시보드</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/admin/sidebar.css">
+    <link rel="stylesheet" href="../../styles/admin/content-management.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h1>대시보드</h1>
+            <ul>
+                <li><a href="admin_dashboard.html"><i class="fas fa-home"></i> 메인</a></li>
+                <li><a href="admin_user_management.html"><i class="fas fa-users"></i> 사용자 관리</a></li>
+                <li><a href="admin_content_management.html" class="active"><i class="fas fa-file-alt"></i> 컨텐츠 관리</a></li>
+                <li><a href="admin_customer_support.html"><i class="fas fa-headset"></i> 고객지원</a></li>
+                <li class="logout"><a href="/public/index.html"><i class="fas fa-sign-out-alt"></i> 나가기</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <h2>컨텐츠 관리</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>공지사항</h3>
+                    <p>공지사항을 관리합니다.</p>
+                    <a href="../../pages/admin/admin_notices.html" class="manage-button">관리하기</a>
+                </div>
+                <div class="content-card">
+                    <h3>업데이트</h3>
+                    <p>업데이트 내용을 관리합니다.</p>
+                    <a href="../../pages/admin/admin_updates.html" class="manage-button">관리하기</a>
+                </div>
+                <div class="content-card">
+                    <h3>자유게시판</h3>
+                    <p>자유게시판을 관리합니다.</p>
+                    <a href="../../pages/admin/admin_general.html" class="manage-button">관리하기</a>
+                </div>
+                <div class="content-card">
+                    <h3>공략게시판</h3>
+                    <p>공략게시판을 관리합니다.</p>
+                    <a href="../../pages/admin/admin_strategy.html" class="manage-button">관리하기</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

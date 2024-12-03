@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>업데이트 작성 - 관리자 대시보드</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/admin/sidebar.css">
+    <link rel="stylesheet" href="../../styles/admin/admin_notices.css">
+    <link rel="stylesheet" href="../../styles/admin/admin_noticewriting.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../../scripts/admin/admin_updateswriting.js" defer></script>
+
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar 유지 -->
+        <aside class="sidebar">
+            <h1>대시보드</h1>
+            <ul>
+                <li><a href="admin_dashboard.html"><i class="fas fa-home"></i> 메인</a></li>
+                <li><a href="admin_user_management.html"><i class="fas fa-users"></i> 사용자 관리</a></li>
+                <li><a href="admin_content_management.html" class="active"><i class="fas fa-file-alt"></i> 컨텐츠 관리</a></li>
+                <li><a href="admin_customer_support.html"><i class="fas fa-headset"></i> 고객지원</a></li>
+                <li class="logout"><a href="/public/index.html"><i class="fas fa-sign-out-alt"></i> 나가기</a></li>
+            </ul>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <h2>업데이트 작성</h2>
+            <form id="create-notice-form" enctype="multipart/form-data">
+                <!-- 타입 선택 필드 -->
+                <div class="form-group">
+                    <label for="type">타입</label>
+                    <select id="type" name="type" required>
+                        <option value="업데이트">업데이트</option>
+                        
+                    </select>
+                </div>
+                <!-- 제목 필드 -->
+                <div class="form-group">
+                    <label for="title">제목</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <!-- 내용 필드 -->
+                <div class="form-group">
+                    <label for="content">내용</label>
+                    <textarea id="content" name="content" rows="10" required></textarea>
+                </div>
+                <!-- 첨부파일 필드 -->
+                <div class="form-group">
+                    <label for="attachment">첨부파일</label>
+                    <input type="file" id="attachment" name="attachment">
+                </div>
+                <!-- 등록 버튼 -->
+                <button type="submit" id="submit-btn">등록</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

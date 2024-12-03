@@ -1,0 +1,183 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.post-detail-container {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-header h1 {
+    font-size: 22px;
+    color: #333;
+}
+
+.post-meta span {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.post-content {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.post-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.post-actions button {
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#like-button {
+    background-color: #e50914;
+    color: white;
+}
+
+#like-button:hover {
+    background-color: #b50711;
+}
+
+#edit-post-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+#edit-post-btn:hover {
+    background-color: #0056b3;
+}
+
+#delete-post-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+#delete-post-btn:hover {
+    background-color: #b21f30;
+}
+
+.comment-section {
+    margin-top: 40px;
+}
+
+.comment-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#comment-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+#comment-list li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+#comment-input {
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#submit-comment-btn {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#submit-comment-btn:hover {
+    background-color: #218838;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+
+.delete-comment-btn {
+    background-color: transparent;
+    color: red;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.delete-comment-btn:hover {
+    color: darkred;
+}
+
+
+/* 카테고리 레이블 스타일 */
+.category-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #000000; /* 파란색 배경 */
+    border-radius: 5px;
+    text-align: center;
+}
